@@ -1,5 +1,5 @@
 'use strict';
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function() {
         floatchart()
     }, 100);
@@ -32,8 +32,187 @@ $(document).ready(function() {
 });
 
 function floatchart() {
+
+    // [ coversions-chart ] start
+    (function () {
+        var options1 = {
+            chart: {
+                type: 'bar',
+                height: 65,
+                sparkline: {
+                    enabled: true
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            colors: ["#73b4ff"],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: "vertical",
+                    shadeIntensity: 0,
+                    gradientToColors: ["#4099ff"],
+                    inverseColors: true,
+                    opacityFrom: 0.99,
+                    opacityTo: 0.99,
+                    stops: [0, 100]
+                },
+            },
+            plotOptions: {
+                bar: {
+                    columnWidth: '80%'
+                }
+            },
+            series: [{
+                data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 54, 25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 25, 44, 12, 36, 9, 54]
+            }],
+            xaxis: {
+                crosshairs: {
+                    width: 1
+                },
+            },
+            tooltip: {
+                fixed: {
+                    enabled: false
+                },
+                x: {
+                    show: false
+                },
+                y: {
+                    title: {
+                        formatter: function(seriesName) {
+                            return ''
+                        }
+                    }
+                },
+                marker: {
+                    show: false
+                }
+            }
+        }
+        new ApexCharts(document.querySelector("#coversions-chart1"), options1).render();
+        var options2 = {
+            chart: {
+                type: 'bar',
+                height: 65,
+                sparkline: {
+                    enabled: true
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            colors: ["#59e0c5"],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: "vertical",
+                    shadeIntensity: 0,
+                    gradientToColors: ["#2ed8b6"],
+                    inverseColors: true,
+                    opacityFrom: 0.99,
+                    opacityTo: 0.99,
+                    stops: [0, 100]
+                },
+            },
+            plotOptions: {
+                bar: {
+                    columnWidth: '80%'
+                }
+            },
+            series: [{
+                data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 54, 25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 25, 44, 12, 36, 9, 54]
+            }],
+            xaxis: {
+                crosshairs: {
+                    width: 1
+                },
+            },
+            tooltip: {
+                fixed: {
+                    enabled: false
+                },
+                x: {
+                    show: false
+                },
+                y: {
+                    title: {
+                        formatter: function(seriesName) {
+                            return ''
+                        }
+                    }
+                },
+                marker: {
+                    show: false
+                }
+            }
+        }
+        new ApexCharts(document.querySelector("#coversions-chart2"), options2).render();
+        var options4 = {
+            chart: {
+                type: 'bar',
+                height: 65,
+                sparkline: {
+                    enabled: true
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            colors: ["#ff869a"],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: "vertical",
+                    shadeIntensity: 0,
+                    gradientToColors: ["#ff5370"],
+                    inverseColors: true,
+                    opacityFrom: 0.99,
+                    opacityTo: 0.99,
+                    stops: [0, 100]
+                },
+            },
+            plotOptions: {
+                bar: {
+                    columnWidth: '80%'
+                }
+            },
+            series: [{
+                data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 54, 25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 25, 44, 12, 36, 9, 54]
+            }],
+            xaxis: {
+                crosshairs: {
+                    width: 1
+                },
+            },
+            tooltip: {
+                fixed: {
+                    enabled: false
+                },
+                x: {
+                    show: false
+                },
+                y: {
+                    title: {
+                        formatter: function(seriesName) {
+                            return ''
+                        }
+                    }
+                },
+                marker: {
+                    show: false
+                }
+            }
+        }
+        new ApexCharts(document.querySelector("#coversions-chart4"), options4).render();
+    })();
+    // [ coversions-chart ] end
     // [ seo-card1 ] start
-    $(function() {
+    (function () {
         var options1 = {
             chart: {
                 type: 'area',
@@ -89,10 +268,10 @@ function floatchart() {
             }
         }
         new ApexCharts(document.querySelector("#seo-card1"), options1).render();
-    });
+    })();
     // [ seo-card1 ] end
     // [ customer-chart ] start
-    $(function() {
+    (function () {
         var options = {
             chart: {
                 height: 150,
@@ -175,10 +354,10 @@ function floatchart() {
         }
         var chart = new ApexCharts(document.querySelector("#customer-chart1"), options1);
         chart.render();
-    });
+    })();
     // [ customer-chart ] end
     // [ unique-visitor-chart ] start
-    $(function() {
+    (function () {
         var options = {
             chart: {
                 height: 230,
@@ -254,6 +433,6 @@ function floatchart() {
         }
         var chart = new ApexCharts(document.querySelector("#unique-visitor-chart"), options);
         chart.render();
-    });
+    })();
     // [ unique-visitor-chart ] end
 }
